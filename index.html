@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prematrícula Complejo Educativo María Luisa Parada </title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Complejo Educativo María Luisa Parada </h1>
+            <nav>
+                <a href="#proceso">Admisiones</a>
+                <a href="#requisitos">Requisitos</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <h2>Abre las puertas al futuro. ¡Inicia tu Prematrícula!</h2>
+            <p>Proceso de Admisión para el Ciclo Escolar 2026-2027.</p>
+            <button id="iniciarProcesoBtn" class="cta-button">INICIAR PROCESO DE ADMISIÓN</button>
+        </section>
+
+        <section id="proceso" class="admission-process">
+            <h3>Proceso de Prematrícula en 3 Pasos</h3>
+            
+            <div class="step-progress">
+                <div class="step active" id="step1-tab">1. Datos Estudiante</div>
+                <div class="step" id="step2-tab">2. Datos Tutor</div>
+                <div class="step" id="step4-tab">3. Confirmación</div>
+            </div>
+
+            <form id="prematriculaForm" class="form-container">
+                <div class="form-step active" id="step1-content">
+                    <h4>Paso 1: Datos del Estudiante</h4>
+                    <label for="nivel">Grado que se matricula :</label>
+                    <select id="nivel" required>
+                        <option value="">Seleccione...</option>
+                        <option value="Preescolar">Primero </option>
+                        <option value="Primaria">Segundo</option>
+                        <option value="Secundaria">Tercero</option>
+                        <option value="Secundaria">Cuarto </option>
+                        <option value="Secundaria">Quinto</option>
+                        <option value="Secundaria">Sexto</option>
+                        <option value="Secundaria">Septimo</option>
+                        <option value="Secundaria">Octavo</option>
+                        <option value="Secundaria">Noveno</option>
+                        
+                    </select>
+
+                    <label for="nombre_aspirante">Nombre de el estudiante:</label>
+                    <input type="text" id="nombre_aspirante" required>
+
+                    <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+                    <input type="date" id="fecha_nacimiento" required>
+
+                    <label for="Institucion de procedencia">Institucion de procedencia:</label>
+                    <input type="text" id="Institucion de procedencia " required>
+
+
+                    <label for="direccion">Dirección de Residencia:</label>
+                    <input type="text" id="direccion" required>
+
+                    <button type="button" class="next-btn">Siguiente</button>
+                </div>
+
+                <div class="form-step" id="step2-content">
+                    <h4>Paso 2: Datos del Padre/Madre/Tutor</h4>
+                    <label for="nombre_tutor">Nombre Completo del Tutor:</label>
+                    <input type="text" id="nombre_tutor" required>
+
+                    <label for="Parentesco">Parentesco:</label>
+                    <input type="text" id="Parentesco" required>
+
+
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" id="telefono" required>
+
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" required>
+
+
+                    <label for="DUI">DUI:</label>
+                    <input type="tel" id="DUI" required>
+
+
+                    <label for="NIE">NIE:</label>
+                    <input type="tel" id="NIE" required>
+
+
+
+                    <button type="button" class="prev-btn">Anterior</button>
+                    <button type="button" class="next-btn">Siguiente</button>
+                </div>
+
+
+                <div class="form-step" id="step4-content">
+                    <h4>Paso 3: Confirmación Final</h4>
+                    
+                    <p>Revisa que todos tus datos sean correctos. Al hacer clic en enviar, tu solicitud será procesada.</p>
+
+                    <input type="checkbox" id="acepto" required>
+                    <label for="acepto">Acepto los <a href="#" target="_blank">Términos y Condiciones</a> y el Aviso de Privacidad.</label>
+                    
+                    <button type="button" class="prev-btn">Anterior</button>
+                    <button type="submit" class="cta-button submit-btn">ENVIAR SOLICITUD</button>
+                </div>
+            </form>
+            
+            <div id="confirmationMessage" style="display:none; text-align: center; margin-top: 30px;">
+                <h4 style="color: #28a745;">¡SOLICITUD ENVIADA CON ÉXITO!</h4>
+                <p>Recibirás un correo electrónico de confirmación con los siguientes pasos en las próximas 24 horas.</p>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="requisitos">
+            <h3>Requisitos y Fechas Clave</h3>
+            <div class="info-blocks">
+                <div class="info-block">
+                    <h4>Fechas Importantes</h4>
+                    <ul>
+                        <li>**Inicio de Prematrícula:** 1 de Octubre</li>
+                        <li>**Cierre de Prematrícula:** 30 de Noviembre</li>
+                        <li>**Entrevistas:** Diciembre</li>
+                    </ul>
+                </div>
+                <div class="info-block">
+                    <h4>Requisitos de Edad</h4>
+                    <p>Primer grado  (7 años cumplidos al 31 de Diciembre).</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="contacto">
+        <div class="container">
+            <p>Contacto: <a href="mailto:admisiones@escuela.edu">admisiones@escuela.edu</a> | Tel: 6005-8343</p>
+            <p>&copy; 2025 Complejo Educativo María Luisa Parada. Todos los derechos reservados.</p>
+            <p> Creadores de la pagina .</p>
+            <p> Elias Ezequiel Gomez Medina, Miguel Angel Herrera, Marlon Moises Segovia Henriquez, Adamaris Abigail Hernandez Cruz, Ana Gabriela Melgar Cerritos, Jhoselyn Esmeralda Guevara Hernández. </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,258 @@
+/* Variables y Reset Básico */
+:root {
+    --primary-color: #007bff; /* Azul vibrante */
+    --secondary-color: #28a745; /* Verde para éxito */
+    --text-color: #333;
+    --bg-color: #f4f7f6;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: var(--text-color);
+    background: var(--bg-color);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header y Navegación */
+header {
+    background: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
+}
+
+header h1 {
+    font-size: 1.8em;
+    color: var(--primary-color);
+    display: inline-block;
+}
+
+header nav {
+    float: right;
+    padding-top: 5px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    margin-left: 20px;
+    font-weight: 600;
+}
+
+header nav a:hover {
+    color: var(--primary-color);
+}
+
+/* Sección Principal (Hero) */
+.hero {
+    background: url('hero-bg.jpg') no-repeat center center/cover; /* Reemplaza con una imagen real */
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    margin-bottom: 40px;
+    background-color: var(--primary-color); /* Color de respaldo */
+}
+
+.hero h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 25px;
+}
+
+/* Botón de Llamada a la Acción (CTA) */
+.cta-button {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #218838; /* Un poco más oscuro */
+}
+
+/* Proceso de Admisión */
+.admission-process {
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+.admission-process h3 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--primary-color);
+}
+
+/* Barra de Progreso */
+.step-progress {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+}
+
+.step {
+    flex-grow: 1;
+    text-align: center;
+    padding: 10px 5px;
+    border-bottom: 3px solid transparent;
+    font-weight: 600;
+    color: #999;
+}
+
+.step.active {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+/* Formulario de Pasos */
+.form-container {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-step {
+    display: none; /* Oculta todos los pasos por defecto */
+    animation: fadeIn 0.5s;
+}
+
+.form-step.active {
+    display: block; /* Muestra el paso activo */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Estilos de Elementos de Formulario */
+label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="date"],
+select,
+input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.next-btn, .prev-btn {
+    background: #6c757d; /* Gris para botones de navegación */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-right: 10px;
+}
+
+.next-btn:hover, .prev-btn:hover {
+    background: #5a6268;
+}
+
+/* Sección de Requisitos */
+#requisitos {
+    padding: 40px 0;
+}
+
+.info-blocks {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.info-block {
+    flex: 1;
+    background: white;
+    padding: 20px;
+    border-left: 5px solid var(--primary-color);
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+}
+
+.info-block h4 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.info-block ul {
+    list-style: disc;
+    margin-left: 20px;
+}
+
+/* Footer */
+footer {
+    background: #343a40;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+footer a {
+    color: #ffc107;
+    text-decoration: none;
+}
+
+/* Media Queries para Responsive Design */
+@media (max-width: 768px) {
+    header nav {
+        float: none;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    header nav a {
+        margin: 0 10px;
+    }
+
+    .step-progress {
+        flex-direction: column;
+    }
+
+    .step {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .info-blocks {
+        flex-direction: column;
+    }
+}
